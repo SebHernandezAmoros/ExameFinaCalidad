@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 id="Gestor" class="display-4">GESTOR DE CUENTAS</h1>
+    <h1 id="">Dolares: @ViewBag.TotalDolares</h1>
+    <h1 id="">Soles: @ViewBag.TotalSoles</h1>
+    <h1 id="">Total convertido a soles: @ViewBag.TotalSolesConvert</h1>
+    <a href="/home/CreateCuenta" type="button" class="btn btn-info" style="height: 40px; width: 1200px">Cuenta nueva</a>
+
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Saldo inicial</th>
+                <th scope="col">Moneda</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="@item.CuentaId">@item.CuentaId</td>
+                    <td>@item.Nombre</td>
+                    @if (@item.Propio)
+                    {
+                        <td>Propio</td>
+                    }
+                    else
+                    {
+                        <td>Credito</td>
+                    }
+                    <td>@item.SaldoInicial</td>
+                    @if (@item.Dolares)
+                    {
+                        <td>Dolares</td>
+                    }
+                    else
+                    {
+                        <td>Soles</td>
+                    }
+                    <td>
+                        <a href="/home/ViewGastos/?id=@item.CuentaId" class="btn btn-success">Ver gastos</a>
+                        <a href="/home/ViewIngresos/?id=@item.CuentaId" class="btn btn-danger">Ver ingresos</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+﻿<div class="text-center">
+    <h1 id="CrearGasto" class="display-4">CREAR GASTO</h1>
+    <form action="/home/CreateGasto" method="post">
+        <div class="mb-3">
+            <div class="mb-3">
+                <label for="Cuenta">Eliga la cuenta:</label>
+                <select class="form-control" name="Cuenta" id="Cuenta">
+                    <option value="Elige">Elige</option>
+                    @foreach (var item in ViewBag.cuentas)
+                    {
+                        <option value="@item.Nombre">@item.Nombre</option>
+                    }
+                </select>
+                @Html.ValidationMessage("Cuenta")
+            </div>
+            <div>
+                <label for="Fecha">Fecha</label>
+                <input type="datetime" id="Fecha" name="Fecha" value="@Model.Fecha">
+                @Html.ValidationMessage("Fecha")
+            </div>
+            <label for="Descripcion">Ingrese Descripcion</label>
+            <input type="text" class="form-control" name="Descripcion" id="Descripcion" value="@Model.Descripcion">
+            <p class="text-danger">@Html.ValidationMessage("Descripcion")</p>
+
+            <label for="Monto">Ingrese Monto</label>
+            <input type="text" class="form-control" name="Monto" id="Monto" value="@Model.Monto">
+            <p class="text-danger">@Html.ValidationMessage("Monto")</p>
+            <p class="text-danger">@Html.ValidationMessage("Gasto")</p>
+
+
+
+        </div>
+        <button class="btn btn-primary">Guardar</button>
+        <a href="/home/index" class="btn btn-link">Cancelar</a>
+    </form>
+</div>

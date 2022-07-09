@@ -1,0 +1,26 @@
+﻿<div class="text-center">
+    <h1 id="CrearCuenta" class="display-4">CREAR CUENTA</h1>
+    <form action="/home/CreateCuenta" method="post">
+        <div class="mb-3">
+            <label for="Titulo">Ingrese nombre</label>
+            <input type="text" class="form-control" name="Nombre" id="Nombre" value="@Model.Nombre">
+            <p class="text-danger">@Html.ValidationMessage("Nombre")</p>
+
+
+            <input class="form-check-input" for="Propio" type="checkbox" value="True" id="Propio" name="Propio">
+            <label>Marque si el dinero es propio, si es credito no marque</label>
+
+
+            <label for="SaldoInicial">Ingrese Saldo Inicial</label>
+            <input type="text" class="form-control" name="SaldoInicial" id="SaldoInicial" value="@Model.SaldoInicial">
+            <p class="text-danger">@Html.ValidationMessage("SaldoInicial")</p>
+
+            <input class="form-check-input" for="Dolares" type="checkbox" value="True" id="Dolares" name="Dolares">
+            <label>Marque si la cuenta es en dolares, caso contrario no marque</label>
+
+
+        </div>
+        <button class="btn btn-primary">Guardar</button>
+        <a href="/home/index" class="btn btn-link">Cancelar</a>
+    </form>
+</div>

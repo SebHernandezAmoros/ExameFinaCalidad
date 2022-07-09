@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 id="GestorIngresos" class="display-4">GESTOR DE INGRESOS</h1>
+    <a href="/home/CreateIngreso" type="button" class="btn btn-info" style="height: 40px; width: 1200px">Cuenta nueva</a>
+
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cuenta</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="@item.TransaccionId">@item.TransaccionId</td>
+                    <td>@item.Cuenta</td>
+                    <td>@item.Fecha</td>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Monto</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

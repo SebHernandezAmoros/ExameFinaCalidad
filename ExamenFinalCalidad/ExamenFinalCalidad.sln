@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContFinanci.web", "ContFinanci.web\ContFinanci.web.csproj", "{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContFinanci.test", "ContFinanci.test\ContFinanci.test.csproj", "{12ED33C4-0BEF-42DB-995E-D7BDC633996C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6} = {3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3203AE25-C5DD-40A1-9201-DCDD7BA1E2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12ED33C4-0BEF-42DB-995E-D7BDC633996C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12ED33C4-0BEF-42DB-995E-D7BDC633996C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12ED33C4-0BEF-42DB-995E-D7BDC633996C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12ED33C4-0BEF-42DB-995E-D7BDC633996C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4A19887-6028-4E1D-B604-8A4ABF47211E}
+	EndGlobalSection
+EndGlobal
